@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/includeToolBar2"
+        layout="@layout/app_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:id="@+id/iv_poster_large"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title:"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:background="@drawable/textview_bg"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title Receive"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tv_title_details"
+            android:background="@drawable/textview_bg"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Release Date:"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:background="@drawable/textview_bg"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title Receive"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tv_release_date"
+            android:background="@drawable/textview_bg"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Budeget:"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:background="@drawable/textview_bg"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title Receive"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tv_budget"
+            android:background="@drawable/textview_bg"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textview_bg"
+            android:text="Language:"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Title Receive"
+            android:background="@drawable/textview_bg"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tv_language"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Adult:"
+            android:background="@drawable/textview_bg"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textview_bg"
+            android:text="Title Receive"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tv_Adult"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:id="@+id/rvReviews"/>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Review Found"
+        android:id="@+id/no_review"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/dp_80"/>
+
+</LinearLayout>
